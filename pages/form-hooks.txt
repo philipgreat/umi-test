@@ -1,0 +1,38 @@
+import React from "react";
+import useForm from "react-hook-form";
+import Input from "@material-ui/core/Input";
+import { NavLink } from "react-router-dom";
+import Button from "@material-ui/core/Button";
+
+
+const NavLinkForm = props => {
+  const { register, handleSubmit } = useForm();
+  const onSubmit = (data, e) => {
+    e.preventDefault();
+    props.history.push("/");
+    console.log(data);
+  };
+
+  return (
+    <div className="NavLinkForm">
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <div>
+          <Input
+            style={{
+              marginBottom: "20px"
+            }}
+            name="HelloWorld"
+            inputRef={register}
+            placeholder="Material UI - Input"
+            inputProps={{
+              "aria-label": "Description"
+            }}
+          />
+        </div>
+        <Button type="submit">Submit</Button>
+      </form>
+    </div>
+  );
+};
+
+export default NavLinkForm;
