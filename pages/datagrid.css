@@ -2,3 +2,9 @@
 .title {
   background: rgb(121, 242, 219);
 }
+
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
