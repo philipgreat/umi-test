@@ -12,14 +12,29 @@ export function getRoutes() {
     "component": require('@/pages/apps.tsx').default
   },
   {
+    "path": "/axios",
+    "exact": true,
+    "component": require('@/pages/axios.js').default
+  },
+  {
     "path": "/connection",
     "exact": true,
     "component": require('@/pages/connection.js').default
   },
   {
+    "path": "/customhooks",
+    "exact": true,
+    "component": require('@/pages/customhooks.js').default
+  },
+  {
     "path": "/datagrid",
     "exact": true,
     "component": require('@/pages/datagrid.js').default
+  },
+  {
+    "path": "/effect",
+    "exact": true,
+    "component": require('@/pages/effect.js').default
   },
   {
     "path": "/formhooks-material-ui",
@@ -40,6 +55,11 @@ export function getRoutes() {
     "path": "/",
     "exact": true,
     "component": require('@/pages/index.js').default
+  },
+  {
+    "path": "/notification",
+    "exact": true,
+    "component": require('@/pages/notification.js').default
   },
   {
     "path": "/textfield",
